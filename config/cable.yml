@@ -1,10 +1,10 @@
-development:
-  adapter: async
-
-test:
-  adapter: async
-
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: rails5app_production
+  url: "redis://#{ENV[REDIS_URL]}:#{ENV[REDIS_PORT]}"
+
+local: &local
+  adapter: redis
+  url: redis://localhost:6379
+
+development: *local
+test: *local
