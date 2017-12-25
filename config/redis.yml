@@ -5,5 +5,5 @@ test:
   host: 'localhost'
   port: '6379'
 production:
-  host: ENV[REDIS_URL]
-  port: ENV[REDIS_PORT]
+  host: ENV['REDIS_URL']
+  port: ENV['REDIS_PORT']
