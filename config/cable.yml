@@ -1,6 +1,6 @@
 production:
   adapter: redis
-  url: "redis://#{ENV[REDIS_URL]}:#{ENV[REDIS_PORT]}"
+  url: "redis://#{ENV['REDIS_URL']}:#{ENV['REDIS_PORT']}"
 
 local: &local
   adapter: redis
